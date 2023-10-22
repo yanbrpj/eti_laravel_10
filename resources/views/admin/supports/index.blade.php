@@ -15,7 +15,9 @@
                 <td>{{ $support->subject }}</td>
                 <td>{{ $support->status }}</td>
                 <td>{{ $support->body }}</td>
-                <td>AÇÔES</td>
+                <td>
+                    <a href="{{ route('supports.show', ['id' => $support->id]) }}">Ver</a> |
+                </td>
             </tr>
         @endforeach
     </tbody>
