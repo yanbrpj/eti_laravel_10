@@ -2,6 +2,9 @@
 
 namespace App\Services;
 
+use App\DTO\CreateSupportDTO;
+use App\DTO\UpdateSupportDTO;
+
 class SupportService
 {
     protected $repository;
@@ -21,23 +24,14 @@ class SupportService
         return $this->repository->findOne($id);
     }
 
-    public function new(
-        string $subject,
-        string $status,
-        string $body
-    ): \stdClass
+    public function new(CreateSupportDTO $dto): \stdClass
     {
-        return $this->repository->new($subject, $status, $body);
+        return $this->repository->new($dto);
     }
 
-    public function update(
-        string $id,
-        string $subject,
-        string $status,
-        string $body
-    ): \stdClass|null
+    public function update(UpdateSupportDTO $dto): \stdClass|null
     {
-        return $this->repository->update($id, $subject, $status, $body);
+        return $this->repository->update($dto);
     }
 
     public function delete(string $id): bool|null
