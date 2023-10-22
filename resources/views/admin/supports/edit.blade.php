@@ -2,6 +2,14 @@
 <hr>
 <a href="{{ route('supports.index') }}">Listagem</a>
 <hr>
+@if($errors->any())
+    <ul>
+        @foreach($errors->all() as $error)
+            <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+@endif
+<hr>
 <form action="{{ route('support.update', ['id' => $support->id]) }}" method="post">
     @csrf
     @method('PUT')

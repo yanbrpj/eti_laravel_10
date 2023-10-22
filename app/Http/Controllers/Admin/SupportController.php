@@ -51,7 +51,7 @@ class SupportController extends Controller
         return view('admin.supports.edit', compact('support'));
     }
 
-    public function update(string|int $id, Request $request, Support $support)
+    public function update(string|int $id, StoreUpdateSupport $request, Support $support)
     {
         if(!$support = $support->find($id))
         {
