@@ -8,3 +8,6 @@ Route::get('/', function () {
 });
 
 Route::get('/supports', [SupportController::class, 'index'])->name('supports.index');
+
+Route::post('/supports', [SupportController::class, 'store'])->name('support.store');
+Route::get('/supports/create', [SupportController::class, 'create'])->name('supports.create');

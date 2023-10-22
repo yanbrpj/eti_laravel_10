@@ -1,5 +1,7 @@
 <h1>Lista de Suportes</h1>
-
+<hr>
+<a href="{{ route('supports.create') }}">Criar</a>
+<hr>
 <table>
     <thead>
         <th>Assunto</th>
