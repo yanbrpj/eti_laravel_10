@@ -33,7 +33,7 @@ class SupportService
         return $this->repository->update($dto);
     }
 
-    public function delete(string $id): bool|null
+    public function delete(string $id): void
     {
         $this->repository->delete($id);
     }

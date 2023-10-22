@@ -34,12 +34,6 @@ class SupportController extends Controller
             CreateSupportDTO::makeFromRequest($request)
         );
 
-        $data = $request->validated();
-
-        $data['status'] = 'a';
-
-        $support->create($data);
-
         return redirect()->route('supports.index');
     }
 
