@@ -7,3 +7,5 @@
     <li>{{ $support->body }}</li>
     <li>{{ $support->status }}</li>
 </ul>
+<hr>
+<a href="{{ route('support.edit', ['id' => $support->id]) }}">Editar Suporte</a>
